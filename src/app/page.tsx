@@ -8,7 +8,7 @@ export default function HomePage() {
   return (
     <Container as="main">
       <Stack $spacing="xl" $align="center">
-        <Title $size="large" $color="primary">
+        <Title $size="large" $tone="brand">
           Image framer
         </Title>
 
