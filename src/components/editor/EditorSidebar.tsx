@@ -89,7 +89,8 @@ const PresetAspect = styled.div<{ $ratio: number }>`
 
 const SegmentedContainer = styled.div`
   display: flex;
-  background: ${({ theme }) => theme.colors.surface.default || "#f1f5f9"};
+  /* Switched to 'canvas' to safely align with your design tokens */
+  background: ${({ theme }) => theme.colors.surface.canvas || "#f1f5f9"};
   padding: 4px;
   border-radius: 8px;
   border: 1px solid ${({ theme }) => theme.colors.border.subtle};

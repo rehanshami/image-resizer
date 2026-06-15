@@ -35,7 +35,9 @@ export const Stack = styled.div<StackProps>`
   display: flex;
   flex-direction: ${({ $direction = "column" }) => $direction};
 
-  gap: ${({ theme, $spacing = "md" }) => theme.spacing[$spacing]};
+  /* Intercept "none" to output 0 layout gap and safely satisfy theme index definitions */
+  gap: ${({ theme, $spacing = "md" }) =>
+    $spacing === "none" ? "0" : theme.spacing[$spacing]};
 
   align-items: ${({ $align = "stretch" }) => alignMap[$align]};
 
